@@ -1,0 +1,124 @@
+<section id="contact" class="section contact">
+  <div class="container">
+    <div class="section-header fade-in">
+      <h2 class="section-title gradient-text">Aloqa</h2>
+      <p class="section-subtitle">Men bilan bog'laning va savollaringizni bering</p>
+    </div>
+
+    <div class="contact-content">
+      <div class="contact-info fade-in">
+        <div class="card">
+          <h3>Bog'lanish ma'lumotlari</h3>
+          <div class="contact-item">
+            <div class="contact-icon">📱</div>
+            <div class="contact-details">
+              <h4>Telefon</h4>
+              <p>+998 XX XXX XX XX</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div class="contact-details">
+              <h4>Email</h4>
+              <p>shoxista&#64;example.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-details">
+              <h4>Manzil</h4>
+              <p>Toshkent, O'zbekiston</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🕒</div>
+            <div class="contact-details">
+              <h4>Ish vaqti</h4>
+              <p>Dushanba - Yakshanba: 9:00 - 21:00</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <h4>Ijtimoiy tarmoqlar</h4>
+          <div class="social-grid">
+            <a href="#" class="social-link">
+              <div class="social-icon">📘</div>
+              <span>Facebook</span>
+            </a>
+            <a href="#" class="social-link">
+              <div class="social-icon">📷</div>
+              <span>Instagram</span>
+            </a>
+            <a href="#" class="social-link">
+              <div class="social-icon">💬</div>
+              <span>Telegram</span>
+            </a>
+            <a href="#" class="social-link">
+              <div class="social-icon">📞</div>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form fade-in">
+        <div class="card">
+          <h3>Xabar yuborish</h3>
+          <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+            <div class="form-group">
+              <label for="name">Ismingiz</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                [(ngModel)]="formData.name"
+                required
+                class="form-control"
+                placeholder="Ismingizni kiriting"
+              >
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                [(ngModel)]="formData.email"
+                required
+                class="form-control"
+                placeholder="Email manzilingizni kiriting"
+              >
+            </div>
+            <div class="form-group">
+              <label for="phone">Telefon</label>
+              <input 
+                type="tel" 
+                id="phone" 
+                name="phone" 
+                [(ngModel)]="formData.phone"
+                class="form-control"
+                placeholder="Telefon raqamingizni kiriting"
+              >
+            </div>
+            <div class="form-group">
+              <label for="message">Xabar</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                [(ngModel)]="formData.message"
+                required
+                class="form-control"
+                rows="5"
+                placeholder="Xabaringizni yozing"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="!contactForm.form.valid">
+              Xabar yuborish
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 

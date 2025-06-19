@@ -1,0 +1,35 @@
+<section id="gallery" class="section gallery">
+  <div class="container">
+    <div class="section-header fade-in">
+      <h2 class="section-title gradient-text">Galereya</h2>
+      <p class="section-subtitle">Mening ishlarim va mahsulotlarim</p>
+    </div>
+
+    <div class="gallery-content">
+      <div class="gallery-grid fade-in">
+        <div class="gallery-item" *ngFor="let item of galleryItems; let i = index">
+          <div class="image-placeholder">
+            <div class="placeholder-content">
+              <p>{{ item.title }}</p>
+              <small>{{ item.description }}</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="upload-info fade-in">
+        <div class="card">
+          <h3>Rasmlar yuklanmoqda...</h3>
+          <p>
+            Bu yerda Shoxista Boboqulova ning ishlaري va mahsulotlarining rasmlari ko'rsatiladi.
+            Rasmlar yuklanganidan so'ng, ular avtomatik ravishda bu yerda paydo bo'ladi.
+          </p>
+          <div class="upload-placeholder">
+            <div class="upload-icon">📸</div>
+            <p>4-5 ta rasm yuklanishi kutilmoqda</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 

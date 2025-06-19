@@ -1,0 +1,23 @@
+<header class="header">
+  <nav class="nav">
+    <div class="container">
+      <div class="nav-content">
+        <div class="logo">
+          <h2 class="gradient-text">Shoxista Boboqulova</h2>
+        </div>
+        <ul class="nav-menu" [class.active]="isMenuOpen">
+          <li><a href="#home" (click)="closeMenu()">Bosh sahifa</a></li>
+          <li><a href="#about" (click)="closeMenu()">Men haqimda</a></li>
+          <li><a href="#business" (click)="closeMenu()">Biznes</a></li>
+          <li><a href="#gallery" (click)="closeMenu()">Galereya</a></li>
+          <li><a href="#contact" (click)="closeMenu()">Aloqa</a></li>
+        </ul>
+        <div class="hamburger" (click)="toggleMenu()" [class.active]="isMenuOpen">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header> 
