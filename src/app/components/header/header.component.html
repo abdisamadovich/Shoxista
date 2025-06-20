@@ -1,23 +1,27 @@
-<header class="header">
-  <nav class="nav">
-    <div class="container">
-      <div class="nav-content">
-        <div class="logo">
-          <h2 class="gradient-text">Shoxista Boboqulova</h2>
-        </div>
-        <ul class="nav-menu" [class.active]="isMenuOpen">
-          <li><a href="#home" (click)="closeMenu()">Bosh sahifa</a></li>
-          <li><a href="#about" (click)="closeMenu()">Men haqimda</a></li>
-          <li><a href="#business" (click)="closeMenu()">Biznes</a></li>
-          <li><a href="#gallery" (click)="closeMenu()">Galereya</a></li>
-          <li><a href="#contact" (click)="closeMenu()">Aloqa</a></li>
-        </ul>
-        <div class="hamburger" (click)="toggleMenu()" [class.active]="isMenuOpen">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </div>
-  </nav>
-</header> 
+<mat-toolbar color="primary" class="mat-elevation-z4">
+  <div class="container nav-content">
+    <span class="logo gradient-text">Shoxista Boboqulova</span>
+    <span class="spacer"></span>
+    <nav>
+      <a mat-button href="#home">Bosh sahifa</a>
+      <a mat-button href="#about">Men haqimda</a>
+      <a mat-button href="#business">Biznes</a>
+      <a mat-button href="#gallery">Galereya</a>
+      <a mat-button href="#contact">Aloqa</a>
+    </nav>
+  </div>
+</mat-toolbar>
+<script>
+  // Silliq scroll uchun (Angular universal uchun window check)
+  if (typeof window !== 'undefined') {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  }
+</script> 

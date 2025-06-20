@@ -1,21 +1,16 @@
-<section id="gallery" class="section gallery">
+<section id="gallery" class="gallery section">
   <div class="container">
-    <div class="section-header fade-in">
-      <h2 class="section-title gradient-text">Galereya</h2>
-      <p class="section-subtitle">Mening ishlarim va mahsulotlarim</p>
-    </div>
-
-    <div class="gallery-content">
-      <div class="gallery-grid fade-in">
-        <div class="gallery-item" *ngFor="let item of galleryItems; let i = index">
-          <img [src]="item.src" [alt]="item.title" class="gallery-img" (error)="onImgError($event)" />
-          <!-- <div class="gallery-caption">
-            <p class="gallery-title">{{ item.title }}</p>
-            <small class="gallery-desc">{{ item.description }}</small>
-          </div> -->
-        </div>
+    <mat-card class="gallery-content mat-elevation-z4">
+      <div class="section-header">
+        <h2 class="section-title gradient-text">Galereya</h2>
+        <p class="section-subtitle">Bizning mahsulotlarimizdan namunalar</p>
+        <mat-divider></mat-divider>
       </div>
-
-    </div>
+      <div class="gallery-grid">
+        <mat-card class="gallery-item" *ngFor="let img of images">
+          <img [src]="img.src" [alt]="img.alt" class="gallery-img" />
+        </mat-card>
+      </div>
+    </mat-card>
   </div>
 </section> 
