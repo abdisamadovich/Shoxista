@@ -11,24 +11,38 @@ import { CommonModule } from '@angular/common';
 export class GalleryComponent {
   galleryItems = [
     {
-      title: 'Bijuteriya kolleksiyasi',
-      description: 'Turli xil mahsulotlar'
+      src: 'assets/IMG_2011.PNG',
+      title: 'IMG_2011',
+      description: 'Bijuteriya mahsuloti 9'
     },
     {
-      title: 'Uzuklar to\'plami',
-      description: 'Chiroyli uzuklar'
+      src: 'assets/IMG_2012.PNG',
+      title: 'IMG_2012',
+      description: 'Bijuteriya mahsuloti 10'
     },
     {
-      title: 'Marjonlar',
-      description: 'Zamonaviy dizayn'
+      src: 'assets/IMG_2013.PNG',
+      title: 'IMG_2013',
+      description: 'Bijuteriya mahsuloti 11'
     },
     {
-      title: 'Sirg\'alar',
-      description: 'Har xil uslubda'
+      src: 'assets/IMG_2014.PNG',
+      title: 'IMG_2014',
+      description: 'Bijuteriya mahsuloti 12'
     },
     {
-      title: 'Maxsus kolleksiya',
-      description: 'Noyob mahsulotlar'
+      src: 'assets/IMG_2015.PNG',
+      title: 'IMG_2015',
+      description: 'Bijuteriya mahsuloti 13'
+    },
+    {
+      src: 'assets/IMG_2016.PNG',
+      title: 'IMG_2016',
+      description: 'Bijuteriya mahsuloti 14'
     }
   ];
+
+  onImgError(event: Event) {
+    (event.target as HTMLImageElement).src = 'assets/placeholder.png';
+  }
 }
