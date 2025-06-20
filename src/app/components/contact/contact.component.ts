@@ -17,10 +17,13 @@ export class ContactComponent {
     message: ''
   };
 
+  successMessage = '';
+
   onSubmit() {
-    console.log('Form submitted:', this.formData);
-    alert('Xabaringiz yuborildi! Tez orada siz bilan bog\'lanamiz.');
+    // Bu yerda haqiqiy email yuborish backend orqali bo'ladi, hozircha faqat xabar chiqadi
+    this.successMessage = 'Xabaringiz shoxista@gmail.com ga yuborildi! Tez orada siz bilan bog\'lanamiz.';
     this.resetForm();
+    setTimeout(() => this.successMessage = '', 7000);
   }
 
   resetForm() {
