@@ -110,4 +110,20 @@
   .stats-grid {
     grid-template-columns: 1fr;
   }
+}
+
+@media (max-width: 600px) {
+  .about.section {
+    padding: 30px 0;
+  }
+  .about-content {
+    padding: 15px 5px;
+    gap: 15px;
+  }
+  .section-title, .about-text h2 {
+    font-size: 1.5rem;
+  }
+  .stat-number {
+    font-size: 1.3rem;
+  }
 } 

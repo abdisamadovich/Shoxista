@@ -136,6 +136,21 @@
   }
 }
 
+@media (max-width: 600px) {
+  .business.section {
+    padding: 30px 0;
+  }
+  .business-content {
+    padding: 10px 2px;
+  }
+  .services-header-row h3, .features-header-row h3, .business-info h2 {
+    font-size: 1.2rem;
+  }
+  .service-card, .feature-item {
+    padding: 15px 8px;
+  }
+}
+
 .services-header-row {
   display: flex;
   align-items: center;
