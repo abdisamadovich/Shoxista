@@ -165,6 +165,21 @@
   }
 }
 
+@media (max-width: 600px) {
+  .contact.section {
+    padding: 30px 0;
+  }
+  .contact-content {
+    padding: 10px 2px;
+  }
+  .section-title {
+    font-size: 1.2rem;
+  }
+  .contact-card, .form-card {
+    padding: 10px 5px;
+  }
+}
+
 .contact-info, .contact-form {
   margin-bottom: 30px;
 } 

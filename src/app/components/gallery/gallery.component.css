@@ -123,4 +123,19 @@
   .gallery-img {
     height: 200px;
   }
+}
+
+@media (max-width: 600px) {
+  .gallery.section {
+    padding: 30px 0;
+  }
+  .gallery-content {
+    padding: 10px 2px;
+  }
+  .gallery-img, .image-placeholder {
+    height: 120px;
+  }
+  .section-title {
+    font-size: 1.2rem;
+  }
 } 
