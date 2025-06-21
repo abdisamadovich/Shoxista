@@ -1,16 +1,24 @@
-<mat-toolbar color="primary" class="mat-elevation-z4">
+<header class="header">
   <div class="container nav-content">
-    <span class="logo gradient-text">Shoxista Boboqulova</span>
-    <span class="spacer"></span>
-    <nav>
-      <a mat-button href="#home">Bosh sahifa</a>
-      <a mat-button href="#about">Men haqimda</a>
-      <a mat-button href="#business">Biznes</a>
-      <a mat-button href="#gallery">Galereya</a>
-      <a mat-button href="#contact">Aloqa</a>
+    <div class="logo">
+      <h2 class="gradient-text">Shoxista Boboqulova</h2>
+    </div>
+
+    <nav class="nav-menu" [ngClass]="{ 'active': isMenuOpen }">
+      <a href="#home" (click)="closeMenu()">Bosh sahifa</a>
+      <a href="#about" (click)="closeMenu()">Men haqimda</a>
+      <a href="#business" (click)="closeMenu()">Biznes</a>
+      <a href="#gallery" (click)="closeMenu()">Galereya</a>
+      <a href="#contact" (click)="closeMenu()">Aloqa</a>
     </nav>
+
+    <div class="hamburger" (click)="toggleMenu()" [ngClass]="{ 'active': isMenuOpen }">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
-</mat-toolbar>
+</header>
 <script>
   // Silliq scroll uchun (Angular universal uchun window check)
   if (typeof window !== 'undefined') {
